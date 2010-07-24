@@ -30,6 +30,4 @@
       return false;
     });
   });
-  
-  
 })(jQuery);
