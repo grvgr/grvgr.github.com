@@ -4,12 +4,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
   <title>YQL Search - grvgr.github.com</title>
-  
+  <link rel="stylesheet" href="yql.search.css" type="text/css" media="screen" title="no title" charset="utf-8" />
 </head>
 
 <body>
-
+  <div class="searchForm">
+    <form action="#" id="search_form" method="get" accept-charset="utf-8">
+      <p><input type="text" name="search_query" value="" id="search_query" /></p>
+      <p><input type="submit" value="Search &rarr;"></p>
+    </form>
+  </div>
+  <div class="resultsBlock">
+    <div class="resultFormat">
+      <span class="resultTitle"><a href="" title="" class="resultLink"></a></span>
+      <span class="resultAbstract"></span>
+    </div>
+  </div>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="yql.search.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
