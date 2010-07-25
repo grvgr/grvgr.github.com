@@ -8,11 +8,10 @@
       if(this.value == default_string) {
         this.value = '';
       }
-    });;
+    });
     
     $('#search_form').submit(function() {
       search_string = $('#search_query').val();
-      console.log(search_string);
       if( search_string == default_string || $.trim(search_string).length == 0 ){
         $('#search_query').val('').focus();
       } else {
@@ -28,20 +27,20 @@
             });
             $('.resultsBlock').append(temp_container).slideDown();
         });
-
+        
         $.getJSON(yql_hash_url ,{action: 'get_index', index: search_string},
           function(json){
             var temp_container = $("<div/>");
+            // show enhanced results only if it's very specific
             if(json.result.length > 1) return false;
 
             var item = $(template).clone();
-            // show enhanced results only if it's very specific
             $('.resultLink', item).html(json.result[0].title).attr('href', json.result[0].url);
             $('.resultAbstract', item).html(json.result[0].abstract);
             temp_container.append(item[0]);
             
             $('.yqlhashBlock').append(temp_container).slideDown();
-        });
+          });
 
       }
       return false;
