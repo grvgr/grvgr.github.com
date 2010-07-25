@@ -15,11 +15,27 @@
       <p><input type="submit" value="Search &rarr;"></p>
     </form>
   </div>
+  <div id="createIndexForm">
+    + Create new Index
+  </div>
+  <div class="createIndex">
+    <form action="#" id="index_create_form" method="get" accept-charset="utf-8">
+      <input type="hidden" name="action" value="post_index" id="action">
+      <label for="index">Index</label> <input type="text" name="index" value="" id="index" />
+      <label for="yql_query">YQL Query</label> <input type="text" name="yql_query" value="" id="yql_query" />
+      <label for="tag">Tag</label> <input type="text" name="tag" value="" id="tag" />
+      <label for="fn">Function</label><input type="text" name="fn" value="" id="fn">
+      <label for="desc">Description</label> <textarea name="desc" rows="8" cols="40" id="desc"></textarea>
+      <p><input type="submit" value="Create &rarr;"></p>
+    </form>
+  </div>
+  <div class="yqlhashBlock">
+  </div>
   <div class="resultsBlock">
-    <div class="resultFormat">
-      <span class="resultTitle"><a href="" title="" class="resultLink"></a></span>
-      <span class="resultAbstract"></span>
-    </div>
+  </div>
+  <div class="resultFormat">
+    <span class="resultTitle"><a href="" title="" class="resultLink"></a></span>
+    <span class="resultAbstract"></span>
   </div>
   
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
